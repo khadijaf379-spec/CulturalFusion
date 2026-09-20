@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F5EF;
+  --color-beige: #E9E1D5;
+  --color-charcoal: #1D1D1B;
+  --color-muted: #6E6A64;
+  --color-gold: #A88B5A;
+  --color-gold-light: #C5A875;
+  --color-gold-dark: #8C7243;
+  --color-sand: #F3EFE6;
+  --color-cream: #FAF8F5;
+  --color-border-subtle: #E8E2D8;
+
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #F8F5EF;
+  --foreground: #1D1D1B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial typography utilities */
+h1, h2, h3, h4, .font-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Subtle luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D2C7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A88B5A;
+}
+
+/* Glassmorphism / Frosted header */
+.header-glass {
+  background-color: rgba(248, 245, 239, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Image zoom hover animation */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Subtle line clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
